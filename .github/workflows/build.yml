@@ -51,4 +51,5 @@ jobs:
         with:
           artifacts: chip.zip
           token: ${{ secrets.GITHUB_TOKEN }}
-          generateReleaseNotes: true            
+          generateReleaseNotes: true
+          tag: test-0.0.0
