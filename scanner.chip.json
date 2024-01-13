@@ -1,0 +1,9 @@
+{
+    "name": "Scanner",
+    "version": 1,
+    "author": "Wittawas Nakkasem, Jakkapong Yuangtong",
+    "pins": [
+        "VCC",  "", "TX",     "",
+        "",     "", "SEND",   "GND"
+    ]
+}
