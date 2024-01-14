@@ -74,4 +74,5 @@ void Chip::onTransmitted(void* context) {
 
 void Chip::sendPinStateChanged(void *context, pin_t, uint32_t) {
     auto const info = static_cast<send_pin_t*>(context);
+    info->instance->send(info->code, info->size);
 }
