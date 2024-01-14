@@ -69,7 +69,7 @@ void Chip::send(const char* code, size_t size) {
 }
 
 void Chip::onTransmitted(void* context) {
-    printf("Transmitted");
+    printf("Transmitted\n");
 }
 
 void Chip::sendPinStateChanged(void *context, pin_t, uint32_t) {
