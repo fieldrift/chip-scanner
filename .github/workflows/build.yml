@@ -17,7 +17,7 @@ jobs:
       - name: Build chip
         uses: wokwi/wokwi-chip-clang-action@main
         with:
-          sources: "src/scanner.chip.cpp"
+          sources: "src/chip.cpp"
 
       - name: Copy chip.json
         run: |
