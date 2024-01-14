@@ -1,4 +1,4 @@
-SOURCES = src/scanner.chip.c
+SOURCES = src/scanner.chip.cpp
 TARGET  = dist/scanner.chip.wasm
 
 .PHONY: all
