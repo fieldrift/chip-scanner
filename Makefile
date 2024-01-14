@@ -19,4 +19,6 @@ dist/scanner.chip.json: dist scanner.chip.json
 
 # .PHONY: test
 # test:
-# 	  cd test && arduino-cli compile -e -b arduino:avr:uno blink
+# 	  cd test && arduino-cli compile -e -b arduino:avr:uno blink.PHONY: action-push
+action-push:
+		act --pull --artifact-server-path ./artifacts push -e act-events/push-tag.json -n
