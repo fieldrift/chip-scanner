@@ -60,12 +60,13 @@ Chip* Chip::Create() {
     return static_cast<Chip*>(malloc(sizeof(Chip)));
 }
 
-void Chip::send(const char* code, size_t size) {
+void Chip::send(const char* code, size_t) {
     printf("Sending code: %s\n", code);
-    uart_write(this->port, (uint8_t*)code, size);
     //
-    static uint8_t LF = 10;
-    uart_write(this->port, &LF, 1);
+    char buffer[64]{};
+    auto bytes = snprintf(buffer, sizeof(buffer), "%s\n", code);
+    //
+    uart_write(this->port, (uint8_t*)buffer, bytes);
 }
 
 void Chip::onTransmitted(void* context) {
