@@ -1,9 +1,9 @@
 {
-    "name": "Scanner",
-    "version": 1,
-    "author": "Wittawas Nakkasem, Jakkapong Yuangtong",
-    "pins": [
-        "VCC",  "", "TX",     "",
-        "",     "", "SEND",   "GND"
-    ]
+  "name": "Scanner",
+  "version": 1,
+  "author": "Wittawas Nakkasem, Jakkapong Yuangtong",
+  "pins": [
+      "VCC",   "",      "TX",     "GND",
+      "SEND1", "SEND2", "SEND3",  "SEND4"
+  ]
 }
