@@ -1,5 +1,8 @@
 {
     "recommendations": [
         "ms-vsliveshare.vsliveshare"
+    ],
+    "unwantedRecommendations": [
+      "ms-vscode.cpptools"
     ]
 }

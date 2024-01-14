@@ -1,4 +1,4 @@
-SOURCES = src/scanner.chip.cpp
+SOURCES = src/chip.cpp
 TARGET  = dist/scanner.chip.wasm
 
 .PHONY: all
@@ -6,7 +6,7 @@ all: $(TARGET) dist/scanner.chip.json
 
 .PHONY: clean
 clean:
-		rm -rf dist
+		rm -rf dist artifacts
 
 dist:
 		mkdir -p dist
