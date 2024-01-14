@@ -2,6 +2,8 @@ name: Build
 
 on:
   push:
+    tags:
+      - '*'
   workflow_dispatch:
 
 jobs:
@@ -35,6 +37,8 @@ jobs:
     needs: build
     if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Download compiled chip
         uses: actions/download-artifact@v3
