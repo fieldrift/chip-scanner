@@ -1,0 +1,25 @@
+{
+    "name": "Scanner Custom Chip",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+            "ms-azuretools.vscode-docker",
+            "Wokwi.wokwi-vscode",
+            "github.vscode-github-actions",
+            "EditorConfig.EditorConfig",
+            "ms-vscode.cpptools",
+            "ms-vscode.makefile-tools"
+        ],
+        "settings": {
+          "terminal.integrated.defaultProfile.linux": "zsh"
+        }
+      }
+    },
+    "mounts": [
+      "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+    ],
+    "runArgs": ["--add-host=host.docker.internal:host-gateway"]
+  }
